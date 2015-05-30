@@ -17,10 +17,21 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
 	background: url("/assets/fresh_snow.png");
+  /* Trebuchet-based sans serif stack */
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 }
 
-.navbar.navbar-inverse {
-  background: url('/asset/footer_lodyas.png');
-  border-radius: 0;
+.navbar-inverse {
+  background: url("/assets/dark_wood.png");
+  
+}
+.navbar .navbar-inverse {
+  border-radius: 10;
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #754B0F;
+  font-family: 'chunkfiveroman', Verdana, sans-serif;
+  font-size: 26px;
 }
