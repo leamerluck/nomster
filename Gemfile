@@ -15,6 +15,9 @@ gem 'bootstrap-sass', '~> 3.3.4'
 # Simple form for submitting new
 gem 'simple_form' 
 
+# Authentication for sign in
+gem 'devise', '>= 3.2.4'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
