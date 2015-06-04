@@ -18,6 +18,9 @@ gem 'simple_form'
 # Authentication for sign in
 gem 'devise', '>= 3.2.4'
 
+# Figaro to add values to the ENV on localhost
+gem 'figaro', '>= 1.0.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -38,6 +41,9 @@ gem 'jbuilder', '~> 1.2'
 
 # Pagination feature when have over n per page
 gem 'will_paginate', '~> 3.0.5'
+
+# Get coordinates for places
+gem 'geocoder'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
