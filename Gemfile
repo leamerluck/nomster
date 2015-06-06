@@ -45,6 +45,9 @@ gem 'will_paginate', '~> 3.0.5'
 # Get coordinates for places
 gem 'geocoder'
 
+# Upload photos by user
+gem 'carrierwave'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
