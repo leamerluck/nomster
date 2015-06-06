@@ -44,16 +44,6 @@
   </div>
 </div>
   <% end %>
-
-  
-  <!-- Button trigger modal -->
-<div>
-  <button class="btn btn-primary btn-med pull-right" style="padding: 5px" data-toggle="modal" data-target="#myModal">
-    I'd like to add a photo
-  </button>
-</div>
-<br/>
-
   
   <div class="clear"></div>
 <br/>  
@@ -85,15 +75,23 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <% end %>
 
 	<br/>
-
+<% if current_user && current_user == @place.user %>
 	<div class="pull-right">
-			<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
+       <!-- Button trigger modal -->
+      
+        <button class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#myModal">
+          Add a Photo
+        </button>
+      
+
+			<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary btn-sm' %>
 		
-			<%= link_to 'Destroy', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'}, :class => 'btn btn-danger' %>
+			<%= link_to 'Destroy', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'}, :class => 'btn btn-danger btn-sm' %>
     
 	</div>
-	<div>
-		<%= link_to 'Return Home', root_path, :class => 'btn btn-primary' %>
+  <% end %>
+	<div class="pull-left">
+		<%= link_to 'Return Home', root_path, :class => 'btn btn-primary btn-sm' %>
 	</div>
 </div>
 
@@ -128,7 +126,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <div class="col-xs-10 col-xs-offset-1">
   <h1 class="pull-left">Comments</h1>
   <!-- Button trigger modal -->
-  <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+  <button class="btn btn-primary btn-md pull-right" data-toggle="modal" data-target="#myModal">
     Leave a Comment
   </button>
 </div>

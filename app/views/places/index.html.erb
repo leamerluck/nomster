@@ -1,14 +1,25 @@
 <% @places.each do |place| %>
 	<div class = "booyah-box col-xs-10 col-xs-offset-1">
+		
+	<% if place.photos.present? %>
+			<div class="thumbnail">
+				<%= image_tag place.photos.first.picture, :class => 'img-responsive', :height => "100px", :width => '100px' %>
+			</div>
+			
+		<% end %>
+	<div>
 		<h1><%= link_to place.name, place_path(place) %></h1>
+		<hr/>
+		
 		<i><%= place.address %></i><br/><br/>
 		<p><%= place.description %><br class="clr"/>
 	
 		<% if place.user.present? %>
 			<small><%= place.user.email %></small>
 		<% end %>
-		
+	</div>
 		<% if place.comments.present? %>
+		
 		<div class="col-xs-12">
 		    <blockquote>
 		      <% if place.comments.last.humanized_rating.present? %>
