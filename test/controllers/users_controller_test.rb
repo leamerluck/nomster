@@ -6,6 +6,6 @@ class UsersControllerTest < ActionController::TestCase
   	place = FactoryGirl.create(:place, :user => user)
   	sign_in user
   	get :show, :id => user.id
-  	assert_reponse :success
+  	assert_response :success
   end
 end
